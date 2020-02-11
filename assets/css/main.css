@@ -1107,7 +1107,23 @@ input, select, textarea {
 /* BG */
 	
 	#particles-js {
- 		background: cornflowerblue;
+		position: absolute;
+		width: 100%;
+		height: #particles-js {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #f0f0f0;
+		background-image: url("");
+		background-r#particles-js {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #f0f0f0;
+		background-image: url("");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
 	}
 	
 	#bg {
