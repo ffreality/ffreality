@@ -466,7 +466,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			 this.errors.push('Message required.');
 		     }
 		     
-
+		     this.sendMail()
 		     e.preventDefault();
 		 },
 		 resetForm() {
@@ -479,9 +479,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			 // SecureToken : "71311377-5b56-465c-8bbb-1c5ea9b4499e",
 			 SecureToken : "07fcfa5a-6ab4-48fd-9cc6-6ba669958cf6",
 			 To : 'form@ffreality.com',
-			 From : "form@ffreality.com",
-			 Subject : "This is the subject",
-			 Body : "And this is the body"
+			 From : 'form@ffreality.com',
+			 Subject : this.form.company,
+			 Body : "Name: " + this.form.name + "<br>" + "Surname: " + this.form.surname + "<br>" +
+				"Company: " + this.form.company + "<br>" + "Department: " + this.form.department + "<br>" +
+				"Email: " + this.form.email + "<br>" + "Phone: " + this.form.phone + "<br>" +
+				"Purpose: " + this.form.purpose + "<br>" + "Message: " + this.form.message
 		     }).then(
 			 message => alert(message)
 		     );
