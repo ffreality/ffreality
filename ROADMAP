@@ -1,14 +1,20 @@
-Website icon will change 
-- (/icons/ff-icon.svg or ff-icon.png) custom font awasome (fa) preferred.
+FIXES 
+- Website icon will change 
+(/icons/ff-icon.svg or ff-icon.png) custom font awasome (fa) preferred.
+- Deleting Elements section in index.html
 
+INTEGRATIONS
 Particle JS background will integrated.
 
 Captcha JS
-- https://www.rvdizajn.com/js-captcha/
+https://www.rvdizajn.com/js-captcha/
 https://www.cssscript.com/numeric-captcha-javascript/
+
 //DONE
-Contact Us section will made.
+Contact system
 - https://www.smtpjs.com/
 - from: form@ffreality.com
-- to: info@ffreality.com
+- to: requests@ffreality.com
 - with secure token
+
+Generic mail requests.
