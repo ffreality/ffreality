@@ -646,7 +646,7 @@ input, select, textarea {
 		
 		.image-icon {
    			width: 30%;
-   			height: auto;
+   			height: %30;
 		}
 		.image:before {
 			pointer-events: none;
