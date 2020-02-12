@@ -464,6 +464,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			     
 			     if (this.form.email.endsWith(this.blockedMails[mail])) {
 				 this.errors.push('Email should be corporate. Cannot be ' + this.blockedMails[mail]);
+				 return false
 			     }
 			 }
 		     }
