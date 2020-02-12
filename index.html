@@ -71,11 +71,14 @@
 		<!-- Contact -->
 		<article id="contact">
 		    <h2 class="major">Contact</h2>
-		    <div class="inner">
-		    <p>Kişisel öneri, iletişim isteği ya da hukuki sorunlar için LinkedIN sayfamızdanki iletişim bilgilerinden bizimle iletişime geçebilirsiniz</p>
-		    </div>    
-		    <div id="vue">
-			<form method="post" action="#" @submit="submitForm">
+			
+			<!-- Contact Text -->    
+			<div class="inner">
+			<p>Kişisel öneri, iletişim isteği ya da hukuki sorunlar için <a href="#" target="_blank">LinkedIN</a> sayfamızdanki iletişim bilgilerinden bizimle iletişime geçebilirsiniz</p>
+			</div>
+			
+			<div id="vue">
+				<form method="post" action="#" @submit="submitForm">
 			    <p v-if="errors.length">
 				<b>Please correct the following error(s):</b>
 				<ul>
@@ -117,8 +120,6 @@
 					<option>Demoday & Fair etc.</option>
 					<option>Collaboration</option>
 					<option>Academic</option>
-        <option>Legal</option>
-        <option>Misc</option>
 				    </select>
 				</div>
 				<div class="field">
