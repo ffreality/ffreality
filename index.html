@@ -72,7 +72,7 @@
 		<article id="contact">
 		    <h2 class="major">Contact</h2>
 		    <div id="vue">
-			<form method="post" action="#" @submit="checkForm">
+			<form method="post" action="#" @submit="submitForm">
 			    <p v-if="errors.length">
 				<b>Please correct the following error(s):</b>
 				<ul>
@@ -107,6 +107,7 @@
 				<div class="field">
 				    <label for="purpose">Communication Reason*</label>
 				    <select v-model="form.purpose" id="purpose">
+					<option value="" selected>Select...</option>
 					<option>Service Informations</option>
 					<option>Skype Meeting</option>
 					<option>Workshop Request</option>
@@ -119,6 +120,16 @@
 				    <label for="message">Message</label>
 				    <textarea v-model="form.message" id="message" rows="4"></textarea>
 				</div>
+
+				<div class="field">
+				    <label for="wantUpdate">Would you like to receive emails about our project updates in your work areas ? *</label>
+				    <select v-model="form.wantUpdate" id="wantUpdate">
+					<option value="" selected>Select...</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				    </select>
+				</div>
+				
 			    </div>
 			    <ul class="actions">
 				<li><input type="submit" value="Send Message" class="primary" /></li>
@@ -418,18 +429,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		     department: null,
 		     email: null,
 		     phone: null,
-		     purpose: null,
+		     purpose: "",
 		     message: null,
+		     wantUpdate: ""
 		 },
 		 blockedMails: ['gmail.com', 'hotmail.com', 'outlook.com', 'live.com',
 				'yandex.com', 'yahoo.com'],
              },
 	     methods: {
-		 checkForm: function (e) {
-		     if (this.name && this.age) {
-			 return true;
-		     }
-
+		 checkForm: function (e) {	     
 		     this.errors = [];
 
 		     if (!this.form.name) {
@@ -459,15 +467,30 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			 }
 		     }
 		     
-		     if (!this.form.purpose) {
+		     if (this.form.purpose == "") {
 			 this.errors.push('Purpose required.');
 		     }
 		     if (!this.form.message) {
 			 this.errors.push('Message required.');
 		     }
+		     if (this.form.wantUpdate == "") {
+			 this.errors.push('Update selection is required.');
+		     }
+
+		     for (property in this.form) {
+			 if (!this.form[property]) {
+			     return false
+			 }
+		     }
+
+		     return true;
 		     
-		     this.sendMail()
+		 },
+		 submitForm: function (e) {
 		     e.preventDefault();
+		     if (this.checkForm(e)) {
+			 this.sendMail();
+		     }
 		 },
 		 resetForm() {
 		     for (property in this.form) {
@@ -484,7 +507,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			 Body : "Name: " + this.form.name + "<br>" + "Surname: " + this.form.surname + "<br>" +
 				"Company: " + this.form.company + "<br>" + "Department: " + this.form.department + "<br>" +
 				"Email: " + this.form.email + "<br>" + "Phone: " + this.form.phone + "<br>" +
-				"Purpose: " + this.form.purpose + "<br>" + "Message: " + this.form.message
+				"Purpose: " + this.form.purpose + "<br>" + "want Update: " + this.form.wantUpdate  + "<br>" +
+				"Message: " + this.form.message
 		     }).then(
 			 message => alert(message)
 		     );
