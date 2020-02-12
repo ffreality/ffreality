@@ -1,14 +1,16 @@
 Frozen Forest Reality Technologies website.
 
-Web site template downloaded from html5up.net (Designed by: @ajlkn) under CCA 3.0 License.
+Web site template (Dimension) downloaded from html5up.net (Designed by: @ajlkn) under CCA 3.0 License.
 You can find original license files in "/DOCS/LICENSES/" folder and also html5up.net/license URL.
 If you think LGPL 3.0 license is wrong for this template, you can create a pull request or send us a message from LinkedIN 
 and we can fix it.
 
-Our design team integrated these scripts
+Our design team integrated these scripts and functions until now.
 - SMTPH JS
 - Generic mail account blocking
 - metatag, metadescription, author fields
+
+contributors can find original index.html (index.html.original) file in root folder.
 
 You can find KVKK and GDPR documents in respective folders
 (When they are done)
