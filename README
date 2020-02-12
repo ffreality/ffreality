@@ -6,7 +6,7 @@ If you think LGPL 3.0 license is wrong for this template, you can create a pull 
 and we can fix it.
 
 Our design team integrated these scripts and functions until now.
-- SMTPH JS
+- SMTP JS
 - Generic mail account blocking
 - metatag, metadescription, author fields
 
