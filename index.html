@@ -420,7 +420,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		     phone: null,
 		     purpose: null,
 		     message: null,
-		 }
+		 },
+		 blockedMails: ['gmail.com', 'hotmail.com', 'outlook.com', 'live.com',
+				'yandex.com', 'yahoo.com'],
              },
 	     methods: {
 		 checkForm: function (e) {
@@ -442,15 +444,28 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		     if (!this.form.department) {
 			 this.errors.push('Department required.');
 		     }
+		     
 		     if (!this.form.email) {
 			 this.errors.push('Email required.');
 		     }
+		     else {
+			 for (mail in this.blockedMails)
+			 {
+			     console.log(this.blockedMails[mail]);
+			     
+			     if (this.form.email.endsWith(this.blockedMails[mail])) {
+				 this.errors.push('Email should be corporate. Cannot be ' + this.blockedMails[mail]);
+			     }
+			 }
+		     }
+		     
 		     if (!this.form.purpose) {
 			 this.errors.push('Purpose required.');
 		     }
 		     if (!this.form.message) {
 			 this.errors.push('Message required.');
 		     }
+		     
 
 		     e.preventDefault();
 		 },
@@ -472,9 +487,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		     );
 		 },
 	     },
-             computed: {
+	     computed: {
 		 
-             }
+	     }
 	 })
 	</script>
     </body>
