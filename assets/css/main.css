@@ -643,11 +643,7 @@ input, select, textarea {
 		display: inline-block;
 		position: relative;
 	}
-		
-		.image-icon {
-   			width: 10%;
-   			height: 10%;
-		}
+
 		.image:before {
 			pointer-events: none;
 			background-image: url("../../images/overlay.png");
