@@ -477,7 +477,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		     }
 
 		     for (property in this.form) {
-			 if (!this.form[property]) {
+			 if (!property == "phone" && !this.form[property]) {
 			     return false
 			 }
 		     }
