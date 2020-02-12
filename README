@@ -2,6 +2,7 @@ Frozen Forest Reality Technologies website.
 
 Web site template downloaded from html5up.net (Designed by: @ajlkn) under CCA 3.0 License.
 You can find original license files in "LICENSES" folder and also html5up.net/license URL.
+If you think LGPL 3.0 license is wrong for this template, you can create a pull request and we can fix it.
 
 Our design team integrated external scripts to these sections with deleting default ones (we only disabled them with comment functions)
 index.html | 363: <!-- CDN Scripts -->  
@@ -12,4 +13,5 @@ AND
 
 integrate meta tag, meta description, author sections to <head></head>
 
-You can find KVKK and GDPR documents in respective folders.
+You can find KVKK and GDPR documents in respective folders
+(When they are done)
